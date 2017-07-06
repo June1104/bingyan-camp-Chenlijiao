@@ -15,7 +15,6 @@ a{
 input{
     outline:none;
 }
-
 #top {
     width:100%;
     height:40px;
@@ -60,6 +59,7 @@ input{
     margin:0 0.2em;
 }
 a.cart-mini {
+    position: relative;
     display:block;
     height:40px;
     line-height:40px;
@@ -68,10 +68,35 @@ a.cart-mini {
     color:#b0b0b0;
     background:#424242;
 }
+a.cart-mini:hover {
+    color:#ff6700;
+    background: #ffffff;
+}
 #cart img {
     height:15px;
     width:20px;
     vertical-align: -4px;
+}
+#cart .cart-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 316px;
+    padding: 15px 0 0;
+    color: #424242;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+#cart:hover .cart-menu {
+    display: block;
+}
+
+#cart .cart-menu .loading {
+    margin: 5px 20px 20px;
+    text-align: center;
+    padding: 20px 0;
+    color: #424242;
 }
 #info a {
     color:#b0b0b0;
@@ -538,13 +563,11 @@ li.topleft a img {
 }
 #page-main {
     width:100%;
-    height: 1000px;
     padding-top: 60px;
     background: #f5f5f5;
 }
 #page-main .big-container {
     width: 90%;
-    height:1000px;
     margin:0 auto;
     /*background: pink;*/
 }
@@ -581,6 +604,7 @@ li.topleft a img {
 #page-main .homeelec-hd .more-choose ul li:hover {
     color: #ff6700;
     border-bottom: 2px solid #ff6700;
+    cursor: pointer;
 }
 #page-main .big-container .homeelec-bd {
     height:614px;
@@ -603,6 +627,7 @@ li.topleft a img {
     float: left;
 }
 #page-main .brick-item {
+    position: relative;
     width:23.47%;
     height: 246px;
     background: #fff;
@@ -643,6 +668,41 @@ li.topleft a img {
 #page-main .brick-item .price del {
     color: #b0b0b0;
 }
+.brick-item .review-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    /*width: 218px;*/
+    height: 0;
+    font-size: 12px;
+    background: #ff6700;
+    opacity: 0;
+    transition: all .2s linear;
+}
+.brick-item:hover .review-wrapper {
+    height:76px;
+    opacity:1;
+}
+#page-main .brick-item .review-wrapper a {
+    display: block;
+    padding: 8px 30px;
+}
+#page-main .brick-item .review-wrapper a .review {
+    margin-bottom: 5px;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+}
+#page-main .brick-item .review-wrapper a .author {
+    color: rgba(255,255,255,0.6);
+    display: block;
+    font-size: 12px;
+}
+.brick-item:hover .review-wrapper {
+    height:76px;
+    opacity:1;
+}
 #page-main .brick-item1 {
     position: relative;
     width:23.47%;
@@ -682,3 +742,169 @@ li.topleft a img {
     width: 48px;
     height: 48px;
 }
+#page-main .hot-comment {
+    height: 473px;
+}
+#page-main .hot-comment .hot-hd {
+    height:58px;
+}
+#page-main .hot-comment .hot-hd .title4 {
+    line-height: 58px;
+    font-size: 22px;
+    font-weight: 200;
+    color: #333;
+}
+#page-main .hot-comment .hot-bd {
+    height: 415px;
+}
+#page-main .hot-comment .hot-bd .hot-item {
+    width:24.1%;
+    height: 415px;
+    float: left;
+    margin-bottom: 14px;
+    margin-right: 13.5px;
+    background: #fff;
+    transition: all .2s linear;
+}
+#page-main .hot-comment .hot-bd .hot-item:hover {
+    z-index: 2;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translate3d(0, -2px, 0);
+}
+#page-main .hot-comment .hot-bd .hot-item .figure-img2 {
+    height: 220px;
+    margin-bottom:28px;
+}
+#page-main .hot-comment .hot-bd .hot-item .exposure {
+    display: block;
+    width: 100%;
+    height: 220px;
+}
+#page-main .hot-comment .hot-bd .hot-item .exposure img {
+    width: 100%;
+    height: 220px;
+}
+#page-main .hot-comment .hot-bd .hot-item .review {
+    height: 72px;
+    line-height: 24px;
+    margin:0 28px 22px ;
+    font-size: 14px;
+    font-weight: 400;
+}
+#page-main .hot-comment .hot-bd .hot-item .review a {
+    display: block;
+    color: #333;
+}
+#page-main .hot-comment .hot-bd .hot-item .author {
+    height: 18px;
+    margin: 0 28px 8px;
+    padding: 0 10px 0 0;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+#page-main .hot-comment .hot-bd .hot-item .info {
+    margin: 0 30px;
+}
+#page-main .hot-comment .hot-bd .hot-item .info .title5 {
+    font-size: 14px;
+    font-weight: 200;
+    color: #333;
+    display: inline-block;
+}
+#page-main .hot-comment .hot-bd .hot-item .info a{
+    color: #333;
+}
+#page-main .hot-comment .hot-bd .hot-item .info .sep {
+    color: #e0e0e0;
+    margin: 0 .25em;
+}
+#page-main .hot-comment .hot-bd .hot-item .info .price {
+    color: #ff6700;
+}
+
+#page-main .hot-comment .hot-bd .hot-item1 {
+    width:24.1%;
+    height: 415px;
+    float: left;
+    margin-bottom: 14px;
+    background: #fff;
+    transition: all .2s linear;
+}
+#page-main .hot-comment .hot-bd .hot-item1:hover {
+    z-index: 2;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translate3d(0, -2px, 0);
+}
+#page-main .hot-comment .hot-bd .hot-item1 .figure-img2 {
+    height: 220px;
+    margin-bottom:28px;
+}
+#page-main .hot-comment .hot-bd .hot-item1 .exposure {
+    display: block;
+    width: 100%;
+    height: 220px;
+}
+#page-main .hot-comment .hot-bd .hot-item1 .exposure img {
+    width: 100%;
+    height: 220px;
+}
+#page-main .hot-comment .hot-bd .hot-item1 .review {
+    height: 72px;
+    line-height: 24px;
+    margin:0 28px 22px ;
+    font-size: 14px;
+    font-weight: 400;
+}
+#page-main .hot-comment .hot-bd .hot-item1 .review a {
+    display: block;
+    color: #333;
+}
+#page-main .hot-comment .hot-bd .hot-item1 .author {
+    height: 18px;
+    margin: 0 28px 8px;
+    padding: 0 10px 0 0;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+#page-main .hot-comment .hot-bd .hot-item1 .info {
+    margin: 0 30px;
+}
+#page-main .hot-comment .hot-bd .hot-item1 .info .title5 {
+    font-size: 14px;
+    font-weight: 200;
+    color: #333;
+    display: inline-block;
+}
+#page-main .hot-comment .hot-bd .hot-item1 .info a{
+    color: #333;
+}
+#page-main .hot-comment .hot-bd .hot-item1 .info .sep {
+    color: #e0e0e0;
+    margin: 0 .25em;
+}
+#page-main .hot-comment .hot-bd .hot-item1 .info .price {
+    color: #ff6700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
