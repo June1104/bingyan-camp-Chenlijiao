@@ -1,0 +1,105 @@
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textarea,p{
+    margin:0px;
+    padding:0px;
+    font-size:12px;
+}
+ul{
+    list-style:none;
+}
+img,a img{
+    border:none;
+}
+a{
+    text-decoration:none;
+}
+input{
+    outline:none;
+}
+#main {
+    width:60%;
+    height: 830px;
+    margin:0 auto;
+}
+#main .main-hd {
+    height: 80px;
+}
+#main .main-hd .title {
+    line-height: 80px;
+    font-size: 20px;
+    color:#9c9594;
+    font-weight:400;
+}
+#main .main-bd {
+    height: 750px;
+}
+#main .main-bd #myDiv {
+    width: 30%;
+    height:350px;
+    background: sandybrown;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 50px;
+}
+#main .main-bd #myDiv #pic img {
+    width:100%;
+    height: 300px;
+}
+#main .main-bd #myDiv1 {
+    width: 30%;
+    height:350px;
+    background: sandybrown;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 50px;
+}
+
+#main .main-bd #myDiv2 {
+    width: 30%;
+    height:350px;
+    background: sandybrown;
+    float: left;
+    margin-bottom: 50px;
+}
+
+#main .main-bd #myDiv3 {
+    width: 30%;
+    height:350px;
+    background: sandybrown;
+    float: left;
+    margin-right: 5%;
+}
+
+#main .main-bd #myDiv4 {
+    width: 30%;
+    height:350px;
+    background: sandybrown;
+    float: left;
+    margin-right: 5%;
+}
+
+#main .main-bd #myDiv5 {
+    width: 30%;
+    height:350px;
+    background: sandybrown;
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
