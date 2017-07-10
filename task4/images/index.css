@@ -17,11 +17,11 @@ input{
 }
 
 #wrap {
-    height: 13.04rem;
+    height: 14.04rem;
     background: #f6edf1;
 }
 #main {
-    height: 13.04rem;
+    height: 14.04rem;
     margin:0 auto;
 }
 #main .main-hd {
@@ -34,7 +34,7 @@ input{
     font-weight:400;
 }
 #main .main-bd {
-    height: 15.15rem;
+    height: 16.15rem;
 
 }
 #main .main-bd #myDiv {
@@ -42,6 +42,7 @@ input{
     height:5.5rem;
     float: left;
     margin-right: 0.302rem;
+    margin-left: 0.2rem;
     margin-bottom: 0.302rem;
     border-bottom: 0.0185rem solid #d3cee1;
 }
@@ -119,6 +120,8 @@ input{
     height:5.5rem;
     float: left;
     margin-right: 0.302rem;
+    margin-left: 0.2rem;
+    margin-bottom: 0.302rem;
     border-bottom: 0.0185rem solid #d3cee1;
 }
 #main .main-bd #myDiv3 #pic3 img {
@@ -144,6 +147,7 @@ input{
     height:5.5rem;
     float: left;
     margin-right: 0.302rem;
+    margin-bottom: 0.302rem;
     border-bottom: 0.0185rem solid #d3cee1;
 }
 #main .main-bd #myDiv4 #pic4 img {
@@ -168,6 +172,7 @@ input{
     width: 3rem;
     height:5.5rem;
     float: left;
+    margin-bottom: 0.302rem;
     border-bottom: 0.0185rem solid #d3cee1;
 }
 #main .main-bd #myDiv5 #pic5 img {
