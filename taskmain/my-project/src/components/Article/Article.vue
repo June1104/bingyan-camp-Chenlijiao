@@ -38,6 +38,7 @@
     font-size: 13px;
     letter-spacing: 2px;
     text-indent: 30px;
+    line-height: 1.5;
   }
 
 

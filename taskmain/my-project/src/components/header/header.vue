@@ -18,14 +18,27 @@
       </form>
     </div>
     <div class="nav">
-      <a class="nav-item" href="#" target="_blank">登录</a>
-      <a class="nav-item" href="#" target="_blank">注册</a>
+      <a class="nav-item" v-on:click="showDetail">登录</a>
+      <a class="nav-item" v-on:click="showDetail">注册</a>
     </div>
+    <div v-show="detailShow" class="sign-in"></div>
   </div>
 </template>
 <script type="text/ecmascript-6">
-  export default {}
+  export default {
+      data(){
+          return{
+              detailShow:false
+          }
+      },
+    methods:{
+          showDetail(){
+              this.detailShow = true
+          }
+    }
+  }
 </script>
+
 <style scoped>
   .header {
     position: relative;
@@ -104,8 +117,17 @@
   }
   .header .nav .nav-item:hover {
     color: white;
+    cursor: pointer;
   }
-
+  .header .sign-in {
+    position: fixed;
+    top: 150px;
+    left: 400px;
+    z-index: 100;
+    width: 500px;
+    height: 300px;
+    background: greenyellow;
+  }
 </style>
 
 
