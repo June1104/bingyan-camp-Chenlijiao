@@ -10,7 +10,7 @@
           <router-link to="/Picture">Picture</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/Shipin">Shipin</router-link>
+          <router-link to="/Shipin">Video</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/Music">Music</router-link>
@@ -39,16 +39,20 @@
   }
   .nav .nav-list {
     position: absolute;
-    left: 80px;
+    left: 90px;
     /*background: #D2E8E5;*/
   }
   .nav .nav-item a {
     display: block;
-    width: 150px;
-    height: 85px;
+    width: 90px;
+    height: 50px;
+    margin-top: 50px;
     color: #bababa;
-    line-height: 100px;
+    line-height: 50px;
+    text-align: center;
     font-size: 16px;
+    border: 2px solid #D2E8E5;
+    border-radius: 20px;
   }
   .nav .nav-item a:hover {
     color: #D2E8E5;

@@ -19,21 +19,56 @@
     </div>
     <div class="nav">
       <a class="nav-item" v-on:click="showDetail">登录</a>
-      <a class="nav-item" v-on:click="showDetail">注册</a>
+      <a class="nav-item" v-on:click="showDetail1">注册</a>
     </div>
-    <div v-show="detailShow" class="sign-in"></div>
+    <div v-show="detailShow" class="sign-in">
+      <p class="title">登录</p>
+      <a v-on:click="hideDetail"></a>
+      <div class="accountNunber">
+        <input class="accountNunber-form" type="text" placeholder="请输入登录邮箱/手机号">
+      </div>
+      <div class="password">
+        <input class="password-form" type="text" placeholder="请输入密码">
+      </div>
+      <div class="signin">
+        <input type="button" value="登录" class="signinButton">
+      </div>
+    </div>
+    <div v-show="detailShow1" class="sign-in">
+      <p class="title">注册</p>
+      <a v-on:click="hideDetail1"></a>
+      <div class="accountNunber">
+        <input class="accountNunber-form" type="text" placeholder="请输入注册邮箱/手机号">
+      </div>
+      <div class="password">
+        <input class="password-form" type="text" placeholder="请输入密码">
+      </div>
+      <div class="signin">
+        <input type="button" value="注册" class="signinButton">
+      </div>
+    </div>
   </div>
 </template>
 <script type="text/ecmascript-6">
   export default {
       data(){
           return{
-              detailShow:false
+              detailShow:false,
+              detailShow1:false
           }
       },
     methods:{
           showDetail(){
               this.detailShow = true
+          },
+          showDetail1(){
+              this.detailShow1 = true
+          },
+          hideDetail(){
+            this.detailShow = false
+          },
+          hideDetail1(){
+            this.detailShow1 = false
           }
     }
   }
@@ -77,7 +112,7 @@
     margin-right: 20px;
     float: left;
     color: #838080;
-    font-size: 15px;
+    font-size: 13px;
   }
   .header .search-box {
     position: absolute;
@@ -112,7 +147,7 @@
     bottom: 42px;
   }
   .header .nav .nav-item {
-    color: #c3c2c2;
+    color: #797979;
     margin-left: 20px;
   }
   .header .nav .nav-item:hover {
@@ -126,7 +161,68 @@
     z-index: 100;
     width: 500px;
     height: 300px;
-    background: greenyellow;
+    background: white;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+  .sign-in .title {
+    padding: 20px 0 0 35px;
+    height: 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #d2e8db;
+  }
+  .sign-in a {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: url("./close.png") no-repeat;
+  }
+  .sign-in a:hover {
+    cursor: pointer;
+  }
+  .sign-in .accountNunber {
+    width: 220px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .sign-in .accountNunber-form {
+    width: 220px;
+    height: 30px;
+  }
+  .sign-in .accountNunber-form:focus {
+    border: 1px solid #d2e8db;
+  }
+  .sign-in .password {
+    width: 220px;
+    height: 60px;
+    margin: 0 auto;
+  }
+  .sign-in .password-form {
+    width: 220px;
+    height: 30px;
+  }
+  .sign-in .password-form:focus {
+    border: 1px solid #d2e8db;
+  }
+  .sign-in .signin {
+    width: 220px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+  .sign-in .signinButton {
+    width: 220px;
+    height: 30px;
+    background: #e5e5e5;
+    border: 1px solid #e5e5e5;
+  }
+  .sign-in .signinButton:hover {
+    background: #d2e8db;
+    border: 1px solid #d2e8db;
+    cursor: pointer;
   }
 </style>
 
