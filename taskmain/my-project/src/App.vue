@@ -4,18 +4,26 @@
     <div class="nav">
       <ul class="nav-list">
         <li class="nav-item">
-          <router-link to="/Article">Article</router-link>
+          <router-link to="/Public">发布</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/Picture">Picture</router-link>
+          <router-link to="/Article">文章</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/Shipin">Video</router-link>
+          <router-link to="/Picture">图片</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/Music">Music</router-link>
+          <router-link to="/Shipin">视频</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/Music">音频</router-link>
         </li>
       </ul>
+    </div>
+    <div class="content">
+      <div class="content-wrapper">
+        <img src="./../src/assets/1.jpg">
+      </div>
     </div>
     <router-view></router-view>
   </div>
@@ -46,16 +54,37 @@
     display: block;
     width: 90px;
     height: 50px;
-    margin-top: 50px;
+    margin-top: 30px;
     color: #bababa;
     line-height: 50px;
     text-align: center;
     font-size: 16px;
-    border: 2px solid #D2E8E5;
-    border-radius: 20px;
+    border: 2px solid #DEF0E8;
+    border-radius: 10px;
   }
   .nav .nav-item a:hover {
     color: #D2E8E5;
+  }
+  .content {
+    width: 73%;
+    float: right;
+    margin-right: 100px;
+  }
+  .content-wrapper {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 50px;
+
+  }
+  .content-wrapper img {
+    filter: blur(.5px);
+  }
+  .content .text {
+    text-align: center;
+    padding-top: 15px;
   }
 </style>
 

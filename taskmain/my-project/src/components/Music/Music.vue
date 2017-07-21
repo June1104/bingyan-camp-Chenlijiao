@@ -11,10 +11,10 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .music-wrapper {
-    width: 77%;
+    width: 73%;
     height: 500px;
     float: right;
-    margin-right: 80px;
+    margin-right: 100px;
     background: thistle;
   }
 </style>

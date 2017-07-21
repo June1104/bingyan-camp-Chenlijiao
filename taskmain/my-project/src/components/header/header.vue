@@ -79,7 +79,7 @@
     position: relative;
     width: 100%;
     height: 200px;
-    background: #D2E8E5;
+    background: #DEF0E8;
   }
   .self-introduction .avatar {
     position: absolute;
