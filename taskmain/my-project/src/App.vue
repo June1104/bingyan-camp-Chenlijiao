@@ -22,7 +22,7 @@
     </div>
     <div class="content">
       <div class="content-wrapper">
-        <img src="./../src/assets/1.jpg">
+        <img src="./../src/assets/3.jpg">
       </div>
     </div>
     <router-view></router-view>
@@ -80,7 +80,6 @@
 
   }
   .content-wrapper img {
-    filter: blur(.5px);
   }
   .content .text {
     text-align: center;
