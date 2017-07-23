@@ -9,4 +9,4 @@ const articleSchema = mongoose.Schema({
   content: { type: String,required: true }
 
 })
-const Article = module.exports = mongoose.model('Article',articleSchema)
+const Article = module.exports = mongoose.model('Articltie',articleSchema)

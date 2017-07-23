@@ -3,9 +3,20 @@
  */
 const express = require('express')
 const app = express()
-app.use('/',(req,res) => {
-  res.send('Yo!')
-})
+const article = require('./router/article')
+const publish = require('./router/publish')
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
+console.log(article)
+
+app.get('/api/articleDetail/:id', require('./router/article'))
+app.post('/api/publishArticle',require('./router/publish'))
+// app.use('/api',article)
+// app.use('/',(req,res) => {
+//   res.send('Yo!')
+// })
 app.listen(3000,() => {
   console.log('app listening on port 3000.')
 })
