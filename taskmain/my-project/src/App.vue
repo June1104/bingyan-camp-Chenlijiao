@@ -4,7 +4,7 @@
     <div class="nav">
       <ul class="nav-list">
         <li class="nav-item">
-          <router-link to="/Public">发布</router-link>
+          <router-link to="/Publish">发布</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/Article">文章</router-link>

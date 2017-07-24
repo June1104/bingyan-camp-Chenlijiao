@@ -4,7 +4,7 @@ import Article from '@/components/Article/Article.vue'
 import Picture from '@/components/Picture/Picture.vue'
 import Shipin from '@/components/Shipin/Shipin.vue'
 import Music from '@/components/Music/Music.vue'
-import Public from '@/components/Public/Public.vue'
+import Publish from '@/components/Publish/Publish.vue'
 
 Vue.use(Router)
 
@@ -31,9 +31,9 @@ export default new Router({
       component:Music
     },
     {
-      path: '/public',
-      name: 'Public',
-      component:Public
+      path: '/publish',
+      name: 'Publish',
+      component:Publish
     }
   ]
 })

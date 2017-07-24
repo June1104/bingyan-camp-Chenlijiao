@@ -3,7 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios'
+//import toastr from 'toastr'
+//import 'toastr/build/toastr.min.css'
 
+Vue.prototype.$http = axios
+//Vue.prototype.toastr = toastr
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
